@@ -1,0 +1,13 @@
+---
+import Head from "../components/head.astro"
+import Header from "../components/header.astro"
+import Footer from "../components/footer.astro"
+---
+<html lang={Astro.currentLocale}>
+    <Head />
+    <body>
+        <Header />
+        <slot />
+        <Footer />
+    </body>
+</html>
