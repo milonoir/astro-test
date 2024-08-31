@@ -1,5 +1,7 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig } from 'astro/config';
+import tailwind from "@astrojs/tailwind";
 
+// https://astro.build/config
 export default defineConfig({
   site: 'https://milonoir.github.io',
   base: '/astro-test',
@@ -7,7 +9,8 @@ export default defineConfig({
     defaultLocale: 'en',
     locales: ['en', 'hu'],
     routing: {
-        prefixDefaultLocale: false,
-    },
+      prefixDefaultLocale: false
+    }
   },
-})
+  integrations: [tailwind()]
+});
