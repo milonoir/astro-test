@@ -6,6 +6,7 @@ export default {
 			fontFamily: {
 				lora: ["Lora", "serif"],
 				myriad: ["MyriadPro", "sans-serif"],
+				lovelyHome: ["LovelyHome", "sans-serif"],
 			},
 		},
 	},
