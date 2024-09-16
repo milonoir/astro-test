@@ -13,7 +13,9 @@ import Scripts from "../components/scripts.astro"
     <body class="antialiased text-default bg-teal-500 bg-page tracking-tight">
         <Header />
         <main>
-        <slot />
+            <div class="px-8">
+                <slot />
+            </div>
         </main>
         <Footer />
         <Scripts />
