@@ -19,6 +19,10 @@
         font-family: "Montserrat";
         src: url("../fonts/Montserrat-Regular.ttf");
     }
+    @font-face {
+        font-family: "Abril";
+        src: url("../fonts/AbrilFatface-Regular.ttf");
+    }
 
     body {
         font-family: MyriadPro;
