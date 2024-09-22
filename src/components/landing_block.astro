@@ -1,0 +1,15 @@
+---
+export interface Props {
+    title: string;
+
+};
+
+const {
+    title
+} = Astro.props;
+---
+
+<section class="py-4 text-center max-w-screen-lg mx-auto">
+    <h2 class="py-2 font-lora text-xl md:text-2xl">{title}</h2>
+    <slot class="font-myriad text-base md:text-lg" />
+</section>
