@@ -33,7 +33,7 @@ const url = Astro.currentLocale === "hu" ? getRelativeLocaleUrl("en") : getRelat
 
     <Nav items={navItems} />
 
-    <div class="flex max-sm:hidden px-7 py-3 md:my-4">
+    <div id="lang" class="flex max-md:hidden px-7 py-3 md:my-4">
         <a class="self-center" href={url}>
             <Image class="w-12 h-12 border-none rounded" src={flag} alt="" />
         </a>

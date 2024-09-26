@@ -19,25 +19,23 @@
 
     const onLoad = function() {
         attachEvent('#header nav', 'click', function () {
-            console.log('--- HEADER NAV CLICKED! ---');
             document.querySelector('[data-aw-toggle-menu]')?.classList.remove('expanded');
             document.body.classList.remove('overflow-hidden');
             document.getElementById('header')?.classList.remove('h-screen');
             document.getElementById('header')?.classList.remove('expanded');
             document.getElementById('header')?.classList.remove('bg-page');
             document.querySelector('#header nav')?.classList.add('hidden');
-            document.querySelector('#header > div:last-child')?.classList.add('max-sm:hidden');
+            document.querySelector('#lang')?.classList.add('max-md:hidden');
         });
 
         attachEvent('[data-aw-toggle-menu]', 'click', function (_, elem) {
-            console.log('--- TOGGLE MENU CLICKED! ---');
             elem.classList.toggle('expanded');
             document.body.classList.toggle('overflow-hidden');
             document.getElementById('header')?.classList.toggle('h-screen');
             document.getElementById('header')?.classList.toggle('expanded');
             document.getElementById('header')?.classList.toggle('bg-page');
             document.querySelector('#header nav')?.classList.toggle('hidden');
-            document.querySelector('#header > div:last-child')?.classList.toggle('max-sm:hidden');
+            document.querySelector('#lang')?.classList.toggle('max-md:hidden');
         });
     }
 
