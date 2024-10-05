@@ -2,6 +2,11 @@
 import Base from "../../layouts/base.astro";
 import LandingBlock from "../../components/landing_block.astro";
 import Boxes from "../../components/boxes.astro";
+import Slides from "../../components/slides.astro";
+
+import springModel1 from "../../assets/images/spring-model-1.jpg";
+import springModel2 from "../../assets/images/spring-model-2.jpg";
+import springModel3 from "../../assets/images/spring-model-3.jpg";
 ---
 
 <Base>
@@ -41,5 +46,12 @@ import Boxes from "../../components/boxes.astro";
     <LandingBlock title="Vágj bele!">
         <p>Tudd meg, mely színek tükrözik leginkább a személyiségedet, és hogyan tudsz harmóniát teremteni a külsőd
             és a belsőd között!</p>
+    </LandingBlock>
+    <LandingBlock title="Íme egy tavasz típus">
+        <Slides id="spring-model" images={[
+            { image: springModel1 },
+            { image: springModel2 },
+            { image: springModel3 },
+        ]} />
     </LandingBlock>
 </Base>

@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+
+const {
+    id,
+    images,
+} = Astro.props;
+
+const idSlidesWrapper = "slides-wrapper-"+id;
+const idSlideBtnPrevious = "slide-btn-prev-"+id;
+const idSlideBtnNext = "slide-btn-next-"+id;
+const idSlidesContainer = "slides-container-"+id;
+const classSlide = "slide-"+id;
+---
+
+<section id={idSlidesWrapper} class="relative mx-auto w-full overflow-hidden">
+    <button id={idSlideBtnPrevious} class="inline-flex absolute rounded-full top-0 bottom-0 left-2 m-auto items-center justify-center bg-white size-8 md:size-16 opacity-50 hover:opacity-100 transition-opacity">
+        <svg class="size-4 md:size-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+        </svg>
+    <button id={idSlideBtnNext} class="inline-flex absolute rounded-full top-0 bottom-0 right-2 m-auto items-center justify-center bg-white size-8 md:size-16 opacity-50 hover:opacity-100 transition-opacity">
+        <svg class="size-4 md:size-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+        </svg>
+    </button>
+    <ul id={idSlidesContainer} class="flex overflow-x-scroll scroll-smooth w-full list-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        {images.map(({ image }) => (
+        <li class:list={[classSlide, "flex my-auto grow shrink-0 basis-full w-full h-full"]}><Image class="" src={image} alt="" /></li>
+        ))}
+    </ul>
+</section>
+
+<script is:inline define:vars={{idSlideBtnPrevious, idSlideBtnNext, idSlidesContainer, classSlide}}>
+    const slidesContainer = document.getElementById(idSlidesContainer);
+    const slide = document.querySelector("."+classSlide);
+    const prevButton = document.getElementById(idSlideBtnPrevious);
+    const nextButton = document.getElementById(idSlideBtnNext);
+
+    nextButton.addEventListener("click", () => {
+        console.log("next slide");
+        const slideWidth = slide.clientWidth;
+        slidesContainer.scrollLeft += slideWidth;
+    });
+    prevButton.addEventListener("click", () => {
+        console.log("prev slide");
+        const slideWidth = slide.clientWidth;
+        slidesContainer.scrollLeft -= slideWidth;
+    });    
+</script>
