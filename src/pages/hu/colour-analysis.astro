@@ -1,0 +1,44 @@
+---
+import Base from "../../layouts/base.astro";
+import LandingBlock from "../../components/landing_block.astro";
+import Slides from "../../components/slides.astro";
+
+import springModel1 from "../../assets/images/spring-model-1.jpg";
+import springModel2 from "../../assets/images/spring-model-2.jpg";
+import springModel3 from "../../assets/images/spring-model-3.jpg";
+---
+
+<Base>
+    <article>
+        <section>
+            <h2 class="py-4 md:py-6 font-lora text-xl md:text-4xl">Mi történik a színtanácsadás során?</h2>
+            <div class="font-myriad text-base md:text-xl">
+                <p class="mb-6">Megérkezel a megbeszélt időpontra, ahol kényelmes környezetben beszélgetünk kicsit, hogy megismerjem, miben
+                    szeretnél segítséget kérni. Átbeszéljük a színelmélet alapjait, hogy tudd, mire számíthatsz, és egy
+                    személyiségtesztet is kitöltesz, ami segít majd a színkendőzés során. Ez nem szabály, inkább támpont a
+                    személyiségedhez és ahhoz, milyen színek támogatják leginkább a jelenlegi életszakaszodat.</p>
+                <p class="mb-6">Ezután a gyakorlatra térünk: a színkendőzéshez smink nélkül foglalhatsz helyet természetes fénynél,
+                    letakarjuk a hajad és ruhád, hogy csak az arcodra koncentrálhass. Először különböző színárnyalatokat
+                    próbálunk ki – hideg és meleg, élénk és lágy árnyalatokat is –, hogy lásd, melyik színek emelik ki
+                    természetesen az arcod és melyek teszik fáradttá. Az eljárás segít felismerni, milyen árnyalatok
+                    fiatalítanak, tesznek üdévé és önazonossá smink nélkül is.</p>
+                <p class="mb-6">Ezen kívül megnézzük, hogy arany vagy ezüst áll-e jobban, mely ékszerek és kiegészítők támogatják
+                    természetes szépséged. A cél, hogy ne szabályokhoz kötött legyen az öltözködésed, hanem szabadon
+                    variálhasd a színeket, tudatosan kiemelve a személyiséged.</p>
+                <p class="mb-6">A tanácsadás során a színpszichológia is előtérbe kerül: a színek hangulatra, érzelmekre gyakorolt hatása
+                    mindennapi eszköz lehet a tudatos öltözködéshez. A megfelelő színek önbizalmat adnak, és a környezetedre
+                    is pozitív hatást gyakorolnak – támogatva mind a külső megjelenésed, mind a belső jólléted.</p>
+                <p class="mb-6">A végén tippeket kapsz, hogyan építheted be az új színeket a meglévő ruhatáradba, miként párosíthatod azokat
+                    egymással és az aktuális stílusodhoz igazítva választhatsz új kedvenceket. Az új színek végigkísérhetnek és
+                    támogatnak a fejlődésed során, inspirálva téged és környezetedet is.</p>
+            </div>
+        </section>
+        <LandingBlock title="Íme egy tavasz típus">
+            <Slides id="spring-slide" images={[
+                { image: springModel1 },
+                { image: springModel2 },
+                { image: springModel3 },
+            ]} />
+        </LandingBlock>
+    </article>
+</Base>

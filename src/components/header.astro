@@ -8,13 +8,13 @@ import Nav from "./nav.astro";
 import Logo from "./logo.astro";
 
 const navItems = Astro.currentLocale === "hu" ? [
-    { text: "Színtanácsadás", href: "#" },
-    { text: "Színtolmácsolás", href: "#" },
-    { text: "Rólam", href: "#" },
+    { text: "Színtanácsadás", href: getRelativeLocaleUrl("hu", "colour-analysis") },
+    { text: "Színtolmácsolás", href: getRelativeLocaleUrl("hu", "colour-interpretation") },
+    { text: "Rólam", href: getRelativeLocaleUrl("hu", "about") },
 ] : [
-    { text: "Colour analysis", href: "#" },
-    { text: "Colour interpretation", href: "#" },
-    { text: "About", href: "#" },
+    { text: "Colour analysis", href: getRelativeLocaleUrl("en", "colour-analysis") },
+    { text: "Colour interpretation", href: getRelativeLocaleUrl("en", "colour-interpretation") },
+    { text: "About", href: getRelativeLocaleUrl("en", "about") },
 ];
 
 const flag = Astro.currentLocale === "hu" ? flagUK : flagHU;

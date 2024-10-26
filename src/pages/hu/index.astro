@@ -2,18 +2,14 @@
 import Base from "../../layouts/base.astro";
 import LandingBlock from "../../components/landing_block.astro";
 import Boxes from "../../components/boxes.astro";
-import Slides from "../../components/slides.astro";
-
-import springModel1 from "../../assets/images/spring-model-1.jpg";
-import springModel2 from "../../assets/images/spring-model-2.jpg";
-import springModel3 from "../../assets/images/spring-model-3.jpg";
 ---
 
 <Base>
     <LandingBlock title="Fedezd fel a színeid varázsát - kívül és belül!">
         <p>Tudtad, hogy a színek nemcsak a külső megjelenésedre, hanem a belső világodra is hatással vannak?
-            Színtanácsadóként abban segítek, hogy megtaláld azokat az árnyalatokat, amelyek nemcsak kiemelik
-            természetes szépségedet, hanem összhangban vannak a személyiségeddel és pozitív energiákat sugároznak.</p>
+            Színtanácsadóként és színtolmácsolóként abban segítek, hogy megtaláld azokat az árnyalatokat, amelyek
+            nemcsak kiemelik természetes szépségedet, hanem összhangban vannak a személyiségeddel, támogatják
+            önismereted fejlődését, és pozitív energiákat sugároznak.</p>
     </LandingBlock>
     <LandingBlock title="Mi is az a színtípus?">
         <p>Az évszakok inspirálta színtípusok - Tavasz, Nyár, Ősz, Tél - mindegyike különböző színek kombinációját
@@ -22,36 +18,40 @@ import springModel3 from "../../assets/images/spring-model-3.jpg";
             és kiegészítőket választhass, amelyek tökéletesen passzolnak hozzád.</p>
     </LandingBlock>
     <LandingBlock title="Színek, amelyek többet mondanak...">
-        <p>A színtanácsadás nem csupán a külső megjelenésről szól. A színek pszichológiai hatása mélyen összefonódik
-            a személyiségeddel. Egy-egy árnyalat képes befolyásolni a hangulatodat, az energiaszintedet, és mások
-            rólad alkotott benyomását. A konzultáció során segítek megérteni, hogy a színek hogyan tükrözik belső
-            világodat, és hogyan használhatod őket az életed különböző területein – az öltözködéstől kezdve a személyes
-            kapcsolatokon át a munkáig.</p>
+        <p>A színtanácsadás és a színtolmácsolás két különálló, de egymást kiegészítő szolgáltatás. Míg a színtanácsadás
+            a külső megjelenésedre fókuszál, segít megtalálni a legelőnyösebb színeket az öltözködéshez, sminkhez és
+            kiegészítőkhöz, addig a színtolmácsolás egy mélyebb, önismereti módszer, amely a színek pszichológiai hatásain
+            keresztül térképezi fel az erősségeidet, gyengeségeidet, jelenlegi életszakaszod kihívásait és múltbeli
+            elakadásaidat.</p>
+        <p class="mt-2">Mindkét szolgáltatás külön-külön is igénybe vehető, de egyben, csomagban is kérheted őket, ha szeretnél teljes
+            képet kapni a külső megjelenésed és belső fejlődésed összhangjáról.</p>
     </LandingBlock>
-    <LandingBlock title="Miért érdemes színtanácsadást kérned?">
+    <LandingBlock title="Miért érdemes színtanácsadást és színtolmácsolást kérned?">
         <Boxes items={[
             { title: 'Önbizalom', text: 'A hozzád illő színek viselése növeli az önbizalmadat, és pozitív kisugárzást kölcsönöz.' },
-            { title: 'Stílus', text: 'Könnyebben összeállíthatod a gardróbodat, ha tudod, mely színek állnak jól.' },
             { title: 'Pszichológiai előny', text: 'A megfelelő színek nemcsak kívül, hanem belül is harmonizálnak veled – növelik a jólét érzését és támogatják a pozitív gondolkodást.' },
-            { title: 'Személyiségelemzés', text: 'Fedezd fel, hogyan tükrözik a színek a belső világodat, és hogyan erősítheted meg velük önmagad.' },
+            { title: 'Stílus', text: 'Könnyebben összeállíthatod a gardróbodat, ha tudod, mely színek állnak jól.' },
+            { title: 'Színtolmácsolás', text: 'Térképezd fel az erősségeidet és elakadásaidat a színek segítségével, és találd meg a fejlődésed útját!' },
+            { title: 'Pozitív visszacsatolás', text: 'A harmonikus színek elismerő visszajelzéseket hoznak a környezetedtől.' },
             { title: 'Tudatosság', text: 'Tudatosabban vásárolhatsz, ezáltal pénzt és időt spórolhatsz meg.' },
         ]}/>
     </LandingBlock>
+    <LandingBlock title="Válaszd a számodra megfelelő szolgáltatást vagy kérd csomagban!">
+        <Boxes items={[
+            { title: 'Színtanácsadás', text: 'Ha a külső megjelenésedet szeretnéd tudatosabban formálni, ez a szolgáltatás segít megtalálni a számodra legelőnyösebb színeket.' },
+            { title: 'Színtolmácsolás', text: 'Ha az önismeret és a belső fejlődés érdekel, a színek pszichológiai hatásain keresztül fedezheted fel erősségeidet és elakadásaidat.' },
+            { title: 'Csomagban', text: 'A két szolgáltatást egyben is kérheted, ha szeretnél átfogóbb képet kapni a külső és belső harmóniádról.' },
+        ]}/>
+    </LandingBlock>
     <LandingBlock title="Hogyan működik?">
-        <p>Egy személyes konzultáció során nemcsak a külső színpalettádat határozzuk meg, hanem feltárjuk, milyen színek
-            illenek a személyiségedhez, és milyen hatással vannak a hangulatodra és önkifejezésedre. A színes kendők
-            segítségével felfedezzük azokat az árnyalatokat, amelyek mind külsőleg, mind belsőleg kihozzák belőled
-            a legjobbat.</p>
+        <p>Egy személyes konzultáció során a választott szolgáltatásnak megfelelően meghatározzuk a külső színpalettádat,
+            vagy a színtolmácsolás segítségével feltárjuk, hogy mely színek tükrözik legjobban a személyiségedet és
+            életszakaszodat. Ha mindkettőt szeretnéd, akkor a teljes folyamatot végigjárjuk, így harmonizálhatod a külső és
+            belső világodat.</p>
     </LandingBlock>
     <LandingBlock title="Vágj bele!">
-        <p>Tudd meg, mely színek tükrözik leginkább a személyiségedet, és hogyan tudsz harmóniát teremteni a külsőd
-            és a belsőd között!</p>
-    </LandingBlock>
-    <LandingBlock title="Íme egy tavasz típus">
-        <Slides id="spring-model" images={[
-            { image: springModel1 },
-            { image: springModel2 },
-            { image: springModel3 },
-        ]} />
+        <p>Tudd meg, mely színek tükrözik leginkább a személyiségedet és életszakaszodat, és hogyan teremthetsz harmóniát
+            a külsőd és a belsőd között!</p>
+        <a href="#" class="my-6 px-4 py-4 mx-2 bg-bittersweet">Belevágok!</a>
     </LandingBlock>
 </Base>

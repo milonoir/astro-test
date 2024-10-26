@@ -1,15 +1,19 @@
 ---
 export interface Props {
     title: string;
-
+    pattern?: boolean;
 };
 
 const {
-    title
+    title,
+    pattern = false
 } = Astro.props;
 ---
 
-<section class="py-8 md:py-12 text-center max-w-screen-lg mx-auto">
+<section class:list={[
+    { pattern: pattern },
+    "py-8 md:py-12 text-center max-w-screen-lg mx-auto"
+]}>
     <h2 class="py-4 md:py-6 font-lora text-xl md:text-4xl">{title}</h2>
     <div class="font-myriad text-base md:text-xl">
         <slot />

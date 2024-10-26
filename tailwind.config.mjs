@@ -13,7 +13,12 @@ export default {
 				"2xs": "0.625rem",
 			},
 			colors: {
-				"cream": "#efebe0",
+				"old-cream": "#efebe0",
+				"cream": "#edeec9",
+				"cornsilk": "#fff3d6",
+				"onyx": "#383d3b",
+				"bittersweet": "#ee6352",
+				"cambridge-blue": "#77bfa3",
 			},
 		},
 	},
